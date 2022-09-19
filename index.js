@@ -45,3 +45,38 @@ const addBookToList = (myBook) => {
 
     
 }
+
+const getBooks=() => {
+    let books;
+    if(localStorage.getItem('books') === null) {
+        books = [];
+    }else {
+        books = JSON.parse(localStorage.getItem('books'));
+    
+    }
+
+    return books;
+}
+
+const addBook = (book) => {
+    const books = getBooks();
+    books.push(book);
+    localStorage.setItem('books',JSON.stringify(books));
+}
+
+const removeBook = (id) => {
+    const books = getBooks();
+    books.forEach((book,index) => {
+     if(book.id === id){
+        books.splice(index,1)
+     }
+    })
+    localStorage.setItem('books',JSON.stringify(books))
+}
+
+const deleteBook = (el) => {
+    if(el.className =='del'){
+        el.parentElement.parentElement.parentElement.remove();
+    }
+}
+
