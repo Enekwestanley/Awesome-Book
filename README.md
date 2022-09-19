@@ -19,7 +19,11 @@ git clone https://github.com/Enekwestanley/Awesome-book.git
 
 ## Authors:
 
-👤 **Stanley:**
+👤 **Stanley Tochukwu Enekwe:**
+- GitHub: [@Enekwestanley](https://github.com/Enekwestanley)
+- Twitter: [@Tochukwu87](https://twitter.com/tochukwu87)
+- LinkedIn: [stanley-enekwe](https://www.linkedin.com/in/stanley-enekwe-285104230/)
+
 
 👤 **Alejandra Keber Maggi:** 
 
