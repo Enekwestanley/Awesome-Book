@@ -88,7 +88,6 @@ addBtn.addEventListener('submit', (e) => {
 document.addEventListener('DOMContentLoaded', displayBooks());
 
 const myBooks = document.querySelector('.books');
-/* const lists = document.querySelectorAll('.list-holder'); */
 const del = document.querySelector('.d-none');
 myBooks.addEventListener('click', (e) => {
   deleteBook(e.target);
