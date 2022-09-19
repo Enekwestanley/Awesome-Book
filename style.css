@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.book-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.book {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.books {
+    align-items: left;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.insertion {
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.insertion-point {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.label-text {
+    font-size: large;
+}
+
+.submit-btn {
+    background-color: darkgrey;
+    color: black;
+    font-size: small;
+    padding: 0.3rem;
+    margin-top: 1rem;
+}
+
+.del-btn {
+    background-color: darkgrey;
+    color: black;
+    font-size: large;
+    padding: 0.3rem 0 0.3rem 0;
+}
+
+.book-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    margin: 1rem auto;
+    width: 25%;
+}
+
+.book {
+    font-size: x-large;
+}
+
+.title, .author {
+    font-size: small;
+}
+.d-none{
+    display: none;
+}
+
+ul li {
+    list-style: none;
+}
