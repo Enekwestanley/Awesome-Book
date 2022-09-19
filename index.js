@@ -42,8 +42,6 @@ const addBookToList = (myBook) => {
     `
     
     bookList.appendChild(nav);
-
-    
 }
 
 const getBooks=() => {
@@ -80,3 +78,46 @@ const deleteBook = (el) => {
     }
 }
 
+const addBtn = document.querySelector('.book-form')
+addBtn.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const bookTitle = document.querySelector('#Title').value;
+    const bookAuthor = document.querySelector('#Author').value;
+    
+
+    const id = Date.now().toString()
+    
+
+    if(bookTitle && bookAuthor){
+    
+          const book = {
+            title: bookTitle,
+            author: bookAuthor,
+            id: id,
+        };
+    
+        
+
+        addBookToList(book);
+        addBook(book)
+
+    }
+    
+    const inputs = document.querySelectorAll('#Title, #Author');
+    inputs.forEach(input => {
+        input.value = "";
+    });
+});
+document.addEventListener('DOMContentLoaded',displayBooks())
+
+
+
+const myBooks = document.querySelector('.books')
+const lists = document.querySelectorAll('.list-holder');
+const del = document.querySelector('.d-none');
+    myBooks.addEventListener("click",e => {
+        
+        deleteBook(e.target)
+        removeBook(del.textContent)
+        })
