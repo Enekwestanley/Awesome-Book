@@ -1,95 +1,37 @@
-const addBookToList = (myBook) => {
-  const bookList = document.querySelector('.books');
-  const nav = document.createElement('nav');
-  nav.className = 'list-holder';
-
-  nav.innerHTML = `
-    <ul class="book-section">
-    <li class="title">${myBook.title}</li> 
-    <li class="author">${myBook.author}</li>
-    <li class="d-none" id="del">${myBook.id}</li>
-    <li>
-    <button class="del">delete</button>
-    </li>
-    </ul>
-    <div>
-    <hr>
-    </div>
-    `;
-
-  bookList.appendChild(nav);
-};
-
-const getBooks = () => {
-  let books;
-  if (localStorage.getItem('books') === null) {
-    books = [];
-  } else {
-    books = JSON.parse(localStorage.getItem('books'));
+//Book class: Represents a book
+class Book {
+  constructor(title, author, id) {
+      this.title = title;
+      this.author = author;
+      this.id = id;
   }
+}
 
-  return books;
-};
-
-const addBook = (book) => {
-  const books = getBooks();
-  books.push(book);
-  localStorage.setItem('books', JSON.stringify(books));
-};
-
-const removeBook = (id) => {
-  const books = getBooks();
-  books.forEach((book, index) => {
-    if (book.id === id) {
-      books.splice(index, 1);
-    }
-  });
-  localStorage.setItem('books', JSON.stringify(books));
-};
-
-const deleteBook = (el) => {
-  if (el.className === 'del') {
-    el.parentElement.parentElement.parentElement.remove();
+// UI class: Handles UI Task
+class UI {
+  static displayBooks() {
+      
+      const books = store.getBooks();
+      books.forEach ((book) => UI.addBookToList(book))
   }
-};
+  static addBookToList(book) {
+      const list = document.querySelector('.main')
+      const section = document.createElement('section')
+      section.classList.add('list-holder')
 
-const displayBooks = () => {
-  const books = getBooks();
-  books.forEach((book) => {
-    addBookToList(book);
-  });
-};
-
-const addBtn = document.querySelector('.book-form');
-addBtn.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const bookTitle = document.querySelector('#Title').value;
-  const bookAuthor = document.querySelector('#Author').value;
-
-  const id = Date.now().toString();
-
-  if (bookTitle && bookAuthor) {
-    const book = {
-      title: bookTitle,
-      author: bookAuthor,
-      id,
-    };
-
-    addBookToList(book);
-    addBook(book);
-  }
-
-  const inputs = document.querySelectorAll('#Title, #Author');
-  inputs.forEach((input) => {
-    input.value = '';
-  });
-});
-document.addEventListener('DOMContentLoaded', displayBooks());
-
-const myBooks = document.querySelector('.books');
-const del = document.querySelector('.d-none');
-myBooks.addEventListener('click', (e) => {
-  deleteBook(e.target);
-  removeBook(del.textContent);
-});
+      section.innerHTML = `<ul class="book-section">
+      <div class="book-caption">
+          <li class="title">"${book.title}"</li> 
+          <li class="by">by</li>
+          <li class="author">${book.author}</li>
+          <li class="id">${book.id}</li>
+      </div>
+      <div>
+          <li>
+          <button class="del">Remove</button>
+          </li>
+      </div>
+  </ul>
+  `
+  list.appendChild(section)
+}
