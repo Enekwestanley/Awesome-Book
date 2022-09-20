@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#book-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.line {
+  width: 10%;
+  border: 0.1px solid black;
+  margin-top: 1rem;
+}
+
+.book-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.main {
+  border: 2px solid black;
+  width: 30%;
+  margin-top: 1rem;
+}
+
+.book-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.book-caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+.list-holder:nth-child(odd) {
+  background-color:lightgrey;
+  padding: 0 0 0.3rem 0.3rem;
+}
+
+.insertion {
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.insertion-point {
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.submit-btn {
+  background-color: darkgrey;
+  color: black;
+  font-size: small;
+  padding: 0.3rem;
+  margin-top: 1rem;
+}
+
+.sub-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.by {
+  margin: 0 0.7rem 0 0.7rem;
+}
+
+.id {
+  display: none; 
+}
+
+.del {
+  background-color: darkgrey;
+  color: black;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.add-book {
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
