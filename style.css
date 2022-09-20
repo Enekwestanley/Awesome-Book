@@ -50,7 +50,7 @@ ul li {
 }
 
 .list-holder:nth-child(odd) {
-  background-color:lightgrey;
+  background-color: lightgrey;
   padding: 0 0 0.3rem 0.3rem;
 }
 
@@ -82,11 +82,10 @@ ul li {
 }
 
 .id {
-  display: none; 
+  display: none;
 }
 
 .del {
-  background-color: darkgrey;
   color: black;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   background-color: white;
