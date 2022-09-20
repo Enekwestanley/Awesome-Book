@@ -4,35 +4,54 @@
   box-sizing: border-box;
 }
 
-.book-form {
+#book-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: left;
+  padding-top: 3rem;
 }
 
-.main {
+.line {
+  width: 10%;
+  border: 0.1px solid black;
+  margin-top: 1rem;
+}
+
+.book-app {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin-top: 1.5rem;
 }
 
-.book {
-  text-align: center;
-  margin-top: 4rem;
-  font-size: x-large;
+.main {
+  border: 2px solid black;
+  width: 30%;
+  margin-top: 1rem;
 }
 
-.books {
-  text-align: left;
-  width: 100%;
+.book-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.form-group {
-  text-align: center;
-  padding-top: 2rem;
+.book-caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+.list-holder:nth-child(odd) {
+  background-color:lightgrey;
+  padding: 0 0 0.3rem 0.3rem;
 }
 
 .insertion {
@@ -45,10 +64,6 @@
   padding: 0.5rem;
 }
 
-.label-text {
-  font-size: large;
-}
-
 .submit-btn {
   background-color: darkgrey;
   color: black;
@@ -57,34 +72,29 @@
   margin-top: 1rem;
 }
 
-.del-btn {
+.sub-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.by {
+  margin: 0 0.7rem 0 0.7rem;
+}
+
+.id {
+  display: none; 
+}
+
+.del {
   background-color: darkgrey;
   color: black;
+  padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.add-book {
+  text-align: center;
   font-size: large;
-  padding: 0.3rem 0 0.3rem 0;
-}
-
-.book-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-hr {
-  margin: 1rem auto;
-  width: 25%;
-}
-
-.title,
-.author {
-  font-size: small;
-}
-
-.d-none {
-  display: none;
-}
-
-ul li {
-  list-style: none;
+  font-weight: 600;
 }
