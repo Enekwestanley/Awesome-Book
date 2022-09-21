@@ -31,7 +31,7 @@
 }
 
 .book {
-  font-size:x-large
+  font-size: x-large;
 }
 
 #book-form {
@@ -55,12 +55,11 @@
 }
 
 .book-add {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
-  display: none;
 }
 
 .main {
@@ -134,17 +133,16 @@ ul li {
 
 .add-book {
   text-align: center;
-  font-size: x-large
+  font-size: x-large;
   font-weight: 600;
 }
 
 .contact {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 1.5rem;
-  display: none;
   line-height: 1.5rem;
 }
 

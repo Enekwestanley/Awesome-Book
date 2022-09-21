@@ -111,7 +111,7 @@ document.querySelector('.main').addEventListener('click', (e) => {
   store.removeBook(id.textContent);
 });
 
-function date () {
+function date() {
   const dt = new Date();
   document.getElementById('date-time').innerHTML = dt.toLocaleString('en-US');
 }
