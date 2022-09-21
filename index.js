@@ -110,3 +110,32 @@ document.querySelector('.main').addEventListener('click', (e) => {
   // Remove from store
   store.removeBook(id.textContent);
 });
+
+function date() {
+  const dt = new Date();
+  document.getElementById('date-time').innerHTML = dt.toLocaleString('en-US');
+}
+date();
+setInterval(date, 1000);
+
+const list = document.getElementById('list');
+const book = document.getElementById('book');
+const contact = document.getElementById('contact');
+
+list.addEventListener('click', () => {
+  document.querySelector('.book-app').style.display = 'flex';
+  document.querySelector('.book-add').style.display = 'none';
+  document.querySelector('.contact').style.display = 'none';
+});
+
+book.addEventListener('click', () => {
+  document.querySelector('.book-app').style.display = 'none';
+  document.querySelector('.book-add').style.display = 'flex';
+  document.querySelector('.contact').style.display = 'none';
+});
+
+contact.addEventListener('click', () => {
+  document.querySelector('.book-app').style.display = 'none';
+  document.querySelector('.book-add').style.display = 'none';
+  document.querySelector('.contact').style.display = 'flex';
+});
